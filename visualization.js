@@ -92,3 +92,27 @@ function changeChartType(newType) {
 	}
 
 }
+
+function parseCSV(fileName){
+	$.ajax({
+	    url: fileName,
+	    async: false,
+	    success: function (csvd) {
+	        data = $.csv.toObjects(csvd);
+	    },
+	    dataType: "text",
+	    complete: function () {
+	        // call a function on complete 
+	    }
+	});
+	return data;
+}
+
+//console.log(data);
+var ageData = parseCSV("data/age.csv");
+var ethnicityData = parseCSV("data/ethnicity.csv");
+var sexData = parseCSV("data/sex.csv");
+
+var inputtedAge = "45-54";
+
+console.log(ageData[7][inputtedAge]);
