@@ -78,14 +78,23 @@ function changeChartType(newType) {
 	    case 'area-spline':
 			chart.transform('area-spline');
 			//change selected value to area-spline
+			$("#line-icon").removeClass("selected-chart");
+			$("#bar-icon").removeClass("selected-chart");
+			$("#area-icon").addClass("selected-chart");
 	        break;
 	    case 'line':
 			chart.transform('line');
-			//change selected value to area-spline
+			//change selected value to line
+			$("#area-icon").removeClass("selected-chart");
+			$("#bar-icon").removeClass("selected-chart");
+			$("#line-icon").addClass("selected-chart");
 	        break;
 	    case 'bar':
 			chart.transform('bar');
-			//change selected value to area-spline
+			//change selected value to bar
+			$("#area-icon").removeClass("selected-chart");
+			$("#line-icon").removeClass("selected-chart");
+			$("#bar-icon").addClass("selected-chart");
 	        break;    
 	    default:
 			chart.transform('area-spline');
