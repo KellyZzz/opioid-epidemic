@@ -125,3 +125,5 @@ var sexData = parseCSV("data/sex.csv");
 var inputtedAge = "45-54";
 
 console.log(ageData[7][inputtedAge]);
+
+
