@@ -67,6 +67,7 @@ function removeEthnicity(){
     $("#asian-pi").removeClass("active");
     $("#other").removeClass("active");
 }
+
 function ethnicitySelect(ethnicity) {
     switch(ethnicity) {
 	case 'white':
@@ -103,4 +104,13 @@ function ethnicitySelect(ethnicity) {
 	    removeEthnicity();
     }  
 }
+
+$("#submit-button").click(function(){
+    //validate input and store values
+    var myRiskFactors = {gender:$("#gender").attr("value"), age:$("#age").attr("value"), ethnicity:$("#ethnicity").attr("value")};
+    //clear form
+    $("#patient-form").empty();
+    //load report
+});
+
 

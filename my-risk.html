@@ -48,14 +48,14 @@
  
     
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" id="patient-form">
 	<section class="col-md-8 col-md-offset-2 input-form">
 	  <h1>Patient Information</h1>
 	  <br>
-	  <h4>Hey there! We want to know some personal information about you. This will help us calcuate your personalized risk. Please select from the options below. In order to protect your anonymity, we do not store this information in any way.</h4>
+	  <h4>Hey there! We want to know some personal information about you. This will help us calcuate your personalized risk. Please select from the options below. (In order to protect your anonymity, we do not store this information in any way.)</h4>
 	  <br>
 	    <h3>What's your gender?</h3>
-	    <div id="gender" value="male">
+	    <div id="gender" value="">
 	      <button type="button" id="male" class="btn btn-lg btn-default" onclick="genderSelect('male')">
 		<img src="assets/boy.png" style="width: 100px;">
 	      </button>
@@ -65,7 +65,7 @@
 	    </div>
 	    <br>
 	    <h3>How old are you?</h3>
-	    <div id="age" value="45-54">
+	    <div id="age" value="">
 	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('0-24')" id="0-24">0-24</button>
 	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('25-34')" id="25-34">25-34</button>
 	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('35-44')" id="35-44">35-44</button>
@@ -75,7 +75,7 @@
 	    </div>
 	    <br>
 	    <h3>What's your ethnicity?</h3>
-	    <div id="ethnicity" value="white">
+	    <div id="ethnicity" value="">
 	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('white')" id="white">White</button>
 	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('black')" id="black">Black</button>
 	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('hispanic')" id="hispanic">Hispanic</button>
@@ -85,7 +85,7 @@
 	    </div>
 	    
 	    <div class="col-md-4 col-md-offset-4" style="padding-top: 7%;">
-	      <button type="button" class="btn btn-lg btn-primary submit-button">Calculate my risk</button>
+	      <button type="button" class="btn btn-lg btn-primary" id="submit-button">Calculate my risk</button>
 	    </div>
 
 	</section>

@@ -72,29 +72,34 @@ function changeData(dataToLoad){
 	} 
 
 }
+function removeSelectedChart(){
+    $("#area-icon").removeClass("selected-chart");
+    $("#line-icon").removeClass("selected-chart");
+    $("#bar-icon").removeClass("selected-chart");
+    $("#area-icon").attr("src", "assets/area-icon.png");
+    $("#line-icon").attr("src", "assets/line-icon.png");
+    $("#bar-icon").attr("src", "assets/bar-icon.png");
+}
 
 function changeChartType(newType) {
 	switch(newType) {
 	    case 'area-spline':
 			chart.transform('area-spline');
-			//change selected value to area-spline
-			$("#line-icon").removeClass("selected-chart");
-			$("#bar-icon").removeClass("selected-chart");
+			removeSelectedChart();
 			$("#area-icon").addClass("selected-chart");
+			$("#area-icon").attr("src", "assets/area-icon-blue.png");
 	        break;
 	    case 'line':
 			chart.transform('line');
-			//change selected value to line
-			$("#area-icon").removeClass("selected-chart");
-			$("#bar-icon").removeClass("selected-chart");
+			removeSelectedChart();
 			$("#line-icon").addClass("selected-chart");
+			$("#line-icon").attr("src", "assets/line-icon-blue.png");
 	        break;
 	    case 'bar':
 			chart.transform('bar');
-			//change selected value to bar
-			$("#area-icon").removeClass("selected-chart");
-			$("#line-icon").removeClass("selected-chart");
+			removeSelectedChart();
 			$("#bar-icon").addClass("selected-chart");
+			$("#bar-icon").attr("src", "assets/bar-icon-blue.png");
 	        break;    
 	    default:
 			chart.transform('area-spline');
@@ -117,7 +122,6 @@ function parseCSV(fileName){
 	return data;
 }
 
-//console.log(data);
 var ageData = parseCSV("data/age.csv");
 var ethnicityData = parseCSV("data/ethnicity.csv");
 var sexData = parseCSV("data/sex.csv");
