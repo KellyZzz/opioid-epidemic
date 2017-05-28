@@ -12,15 +12,25 @@ h1 {text-align: center;}
 h2{}
 h3 {}
 nav {background-color: #2C2A4A;}
+li{list-style-type: none;}
+li img {width: 40px; margin: 0 10px;}
+a {color:#fff;}
+a:hover, a:visited, a:active, a:focus {color:#fff; text-decoration: none;}
 
 .visualization {padding-top: 2%; height: 100vh; background-color: #343253;}
+.the-chart {background-color: #fff;}
 .chart-section {padding: 0;}
 .chart-filters {padding:0; width: 50px;}
 .chart-filters img {width:100%; /*border-bottom: solid 2px #E0E0E0;*/ padding: 15px 10px;}
-.selected-chart {border-bottom: solid 3px #00AEF5;}
+.chart-style {padding: 0;}
+.chart-style img{width: 40px; margin: 10px;}
+.selected-chart {border-bottom: solid 3px #00AEF5 !important;}
+.selected-data {border-left: solid 7px #00AEF5 !important; color: #00AEF5 !important;}
 .input-form {background-color: #fff; margin-top: 5%; padding:2% 5%;}
 
 .form-section {background-color: #30304f;}
+.dataFilters {padding:0;}
+.dataFilters li {padding: 10%; border-bottom: solid 1px #343253; border-left: solid 7px #343253;font-size: 20px;}
 
 #chart {height:80%;}
 #chart .c3-legend-item {}

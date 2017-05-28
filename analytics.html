@@ -48,8 +48,8 @@
 
     <div class="container-fluid">
       <div class="row">
-		<section class="col-md-3" >
-			<div id = "left-side-bar">
+		<section class="col-md-3" style="padding:0;">
+			<!--<div id = "left-side-bar">
   				<ul>
   					<li><a href="#"> 
   						Filters<span class="caret"></span>
@@ -63,25 +63,24 @@
   						</ul>		
   						</li>	
   				</ul>
-  			</div>
+  			</div>-->
+		  <ul class="dataFilters">
+		    <li><a href="#" onclick="changeChartType('area-spline')"><img id="area-icon" class="selected-chart" src="assets/area-icon-blue.png"></a>
+			<a href="#" onclick="changeChartType('line')"><img id="line-icon" src="assets/line-icon.png"></a>
+			<a href="#" onclick="changeChartType('bar')"><img id="bar-icon" src="assets/bar-icon.png"></li></a>
+		    <a href="#" onclick="changeData('total-deaths');"><li class="selected-data" id="total-deaths">All Deaths</li></a>
+		    <a href="#" onclick="changeData('age');"><li id="age">Age</li></a>
+		    <a href="#" onclick="changeData('ethnicity');"><li id="ethnicity">Ethnicity</li></a>
+		    <a href="#" onclick="changeData('intent');"><li id="intent">Intent</li></a>
+		    <a href="#" onclick="changeData('opioid-type');"><li id="opioid-type">Opioid Type</li></a>
+		    <a href="#" onclick="changeData('sex');"><li id="sex">Sex</li></a>
+		  </ul>
 		</section>
       	
       	
       	<section class="col-md-9 chart-section visualization">
-      		
-			<!--Left Section START-->
-			<!--<section class="col-md-12 visualization chart-section">-->
 			  <h2 id="chart-title" style="color:#fff;">California Opioid Overdoses (2006-2013)</h2>
-			  <section class="col-md-1 chart-filters">
-			    <div class="">
-			      <a href="#" onclick="changeChartType('area-spline')"><img id="area-icon" class="selected-chart" src="assets/area-icon-blue.png"></a>
-			      <a href="#" onclick="changeChartType('line')"><img id="line-icon" src="assets/line-icon.png" ></a>
-			      <a href="#" onclick="changeChartType('bar')"><img id="bar-icon" src="assets/bar-icon.png"></a>
-			    </div>
-			  </section>
-			  <div class="col-md-11" id="chart" style="padding-left:0;"></div>
-			<!--</section>-->
-			<!--Left Section END-->
+			  <div class="col-md-12" id="chart" style="padding-left:0;"></div>
 			
 		</section>	
 			
