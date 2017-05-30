@@ -15,7 +15,8 @@
     <!-- Load c3.css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" type="text/css"/> 
     <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
     <!-- Custom styles-->
     <link href="style.css" rel="stylesheet">
   </head>
@@ -34,8 +35,8 @@
           </button>
           <a class="navbar-brand" href="#">MKA Data</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
+        <div id="navbar" class="collapse navbar-collapse" style="float: right;">
+          <ul class="nav navbar-nav" >
             <li><a href="#">Home</a></li>
             <li class="active"><a href="#about">Analytics</a></li>
             <li><a href="my-risk.html">My Risk</a></li>
@@ -65,9 +66,11 @@
   				</ul>
   			</div>-->
 		  <ul class="dataFilters">
-		    <li><a href="#" onclick="changeChartType('area-spline')"><img id="area-icon" class="selected-chart" src="assets/area-icon-blue.png"></a>
+		    <li>
+			<a href="#" onclick="changeChartType('area-spline')"><img id="area-icon" class="selected-chart" src="assets/area-icon-blue.png"></a>
 			<a href="#" onclick="changeChartType('line')"><img id="line-icon" src="assets/line-icon.png"></a>
-			<a href="#" onclick="changeChartType('bar')"><img id="bar-icon" src="assets/bar-icon.png"></li></a>
+			<a href="#" onclick="changeChartType('bar')"><img id="bar-icon" src="assets/bar-icon.png"></a>
+		    </li>
 		    <a href="#" onclick="changeData('total-deaths');"><li class="selected-data" id="total-deaths">All Deaths</li></a>
 		    <a href="#" onclick="changeData('age');"><li id="age">Age</li></a>
 		    <a href="#" onclick="changeData('ethnicity');"><li id="ethnicity">Ethnicity</li></a>
@@ -79,7 +82,7 @@
       	
       	
       	<section class="col-md-9 chart-section visualization">
-			  <h2 id="chart-title" style="color:#fff;">California Opioid Overdoses (2006-2013)</h2>
+			  <h1 id="chart-title" style="color:#fff;">California Opioid Overdoses (2006-2013)</h1>
 			  <div class="col-md-12" id="chart" style="padding-left:0;"></div>
 			
 		</section>	
