@@ -21,7 +21,7 @@
     <link href="style.css" rel="stylesheet">
   </head>
 
-  <body class="form-section">
+  <body>
 
     <nav class="navbar navbar-fixed-top">
       <div class="container">
@@ -47,47 +47,46 @@
     
     <div class="container-fluid">
       <div class="row" id="patient-form">
-	<section class="col-md-8 col-md-offset-2 input-form">
-	  <h1>Patient Information</h1>
-	  <br>
-	  <h4>Hey there! We want to know some information about you. This will help us calcuate your personalized risk, but don't worry, this data is kept anonymous and will never be shared with third parties. To get started, please select from the options below.</h4>
-	  <br>
-	    <h3>What's your gender?</h3>
-	    <div id="gender" value="">
-	      <button type="button" id="male" class="btn btn-lg btn-default" onclick="genderSelect('male')">
-		<img src="assets/boy.png" style="width: 100px;">
-	      </button>
-	      <button type="button" id="female" class="btn btn-lg btn-default" onclick="genderSelect('female')">
-		<img src="assets/girl.png" style="width: 100px;">
-	      </button>
-	    </div>
+	<div id="myRiskChart">
+	  <section class="col-md-8 col-md-offset-2 input-form">
+	    <h1>Patient Information</h1>
 	    <br>
-	    <h3>How old are you?</h3>
-	    <div id="age" value="">
-	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('0-24')" id="0-24">0-24</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('25-34')" id="25-34">25-34</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('35-44')" id="35-44">35-44</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('45-54')" id="45-54">45-54</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('55-64')" id="55-64">55-64</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ageSelect('65-and-over')" id="65-and-over">65 and over</button>
-	    </div>
+	    <h4>Hey there! We want to know some information about you. This will help us calcuate your personalized risk, but don't worry, this data is kept anonymous and will never be shared with third parties. To get started, please select from the options below.</h4>
 	    <br>
-	    <h3>What's your ethnicity?</h3>
-	    <div id="ethnicity" value="">
-	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('white')" id="white">White</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('black')" id="black">Black</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('hispanic')" id="hispanic">Hispanic</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('american-indian')" id="american-indian">American Indian</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('asian-pi')" id="asian-pi">Asian/PI</button>
-	      <button type="button" class="btn btn-lg btn-default" onclick="ethnicitySelect('other')" id="other">Other/Unknown</button>
-	    </div>
-	    
-	    <div class="col-md-4 col-md-offset-4" style="padding-top: 7%;">
-	      <button type="button" class="btn btn-lg btn-primary" id="submit-button">Calculate my risk</button>
-	    </div>
-
-	</section>
-
+	      <h3>What's your gender?</h3>
+	      <div id="gender" value="">
+		<button type="button" id="male" class="btn" onclick="genderSelect('male')">
+		  <img src="assets/boy.png" style="width: 100px;">
+		</button>
+		<button type="button" id="female" class="btn" onclick="genderSelect('female')">
+		  <img src="assets/girl.png" style="width: 100px;">
+		</button>
+	      </div>
+	      <br>
+	      <h3>How old are you?</h3>
+	      <div id="age" value="">
+		<button type="button" class="btn btn-lg btn-default" onclick="ageSelect('0-24')" id="0-24">0-24</button>
+		<button type="button" class="btn btn-lg" onclick="ageSelect('25-34')" id="25-34">25-34</button>
+		<button type="button" class="btn btn-lg" onclick="ageSelect('35-44')" id="35-44">35-44</button>
+		<button type="button" class="btn btn-lg" onclick="ageSelect('45-54')" id="45-54">45-54</button>
+		<button type="button" class="btn btn-lg" onclick="ageSelect('55-64')" id="55-64">55-64</button>
+		<button type="button" class="btn btn-lg" onclick="ageSelect('65-and-over')" id="65-and-over">65 and over</button>
+	      </div>
+	      <br>
+	      <h3>What's your ethnicity?</h3>
+	      <div id="ethnicity" value="">
+		<button type="button" class="btn btn-lg" onclick="ethnicitySelect('white')" id="white">White</button>
+		<button type="button" class="btn btn-lg" onclick="ethnicitySelect('black')" id="black">Black</button>
+		<button type="button" class="btn btn-lg" onclick="ethnicitySelect('hispanic')" id="hispanic">Hispanic</button>
+		<button type="button" class="btn btn-lg" onclick="ethnicitySelect('american-indian')" id="american-indian">American Indian</button>
+		<button type="button" class="btn btn-lg" onclick="ethnicitySelect('asian-pi')" id="asian-pi">Asian/PI</button>
+		<button type="button" class="btn btn-lg" onclick="ethnicitySelect('other')" id="other">Other/Unknown</button>
+	      </div>
+	      
+	      <button type="button" class="btn btn-lg btn-block" id="submit-button">Calculate my risk</button>
+  
+	  </section>
+	</div>
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
 

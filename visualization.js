@@ -10,10 +10,17 @@ var chart = c3.generate({
     	type: 'area-spline'
     },
     padding: {
-	  right: 20
-	}
+	  right: 20,
+	  bottom: 20,
+	  top: 20
+    },
+    color: {
+	pattern: ['#00AEF5', '#b83b5e', '#f9ed69', '#1fab89',  '#ffccfc', '#ff5335']
+    }
 });
 
+
+    
 function removeSelectedData (){
     $("#total-deaths").removeClass("selected-data");
     $("#age").removeClass("selected-data");

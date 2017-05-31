@@ -49,22 +49,7 @@
 
     <div class="container-fluid">
       <div class="row">
-		<section class="col-md-3" style="padding:0;">
-			<!--<div id = "left-side-bar">
-  				<ul>
-  					<li><a href="#"> 
-  						Filters<span class="caret"></span>
-  						</a><ul>
-							<li><a href="#" onclick="changeData('total-deaths');">All Deaths</a></li>
-						    <li><a href="#" onclick="changeData('age');">Age</a></li>
-						    <li><a href="#" onclick="changeData('ethnicity');">Ethnicity</a></li>
-						    <li><a href="#" onclick="changeData('intent');">Intent</a></li>
-						    <li><a href="#" onclick="changeData('opioid-type');">Opioid type</a></li>
-						    <li><a href="#" onclick="changeData('sex');">Sex</a></li>
-  						</ul>		
-  						</li>	
-  				</ul>
-  			</div>-->
+		<section class="col-md-3 filter-section">
 		  <ul class="dataFilters">
 		    <li>
 			<a href="#" onclick="changeChartType('area-spline')"><img id="area-icon" class="selected-chart" src="assets/area-icon-blue.png"></a>
@@ -82,10 +67,9 @@
       	
       	
       	<section class="col-md-9 chart-section visualization">
-			  <h1 id="chart-title" style="color:#fff;">California Opioid Overdoses (2006-2013)</h1>
-			  <div class="col-md-12" id="chart" style="padding-left:0;"></div>
-			
-		</section>	
+	  <h1 id="chart-title" style="color:#fff;">California Opioid Overdoses (2006-2013)</h1>
+	  <div class="col-md-12" id="chart" style="padding-left:0;"></div>		
+	</section>	
 			
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->

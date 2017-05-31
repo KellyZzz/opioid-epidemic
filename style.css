@@ -2,22 +2,27 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
   font-family: 'Raleway', sans-serif;
-  background-color: #25233E;
+  background-color: #343253;
 }
-.c3 svg {font: 13px 'Raleway', sans-serif;}
-.c3-legend-item {font: 16px 'Raleway', sans-serif;}
-h1 {text-align: center; font-family: 'Oswald', sans-serif;}
-h2{}
-h3 {}
+.c3 svg {font: 13px 'Raleway', sans-serif; fill: #8E8E8E;}
+.c3-legend-item {font: 16px 'Raleway', sans-serif; fill: #fff;}
+
+h1 {text-align: center; color: #fff; font-family: 'Oswald', sans-serif;}
+h2{text-align: center; color: #fff;}
+h3 {font-family: 'Oswald', sans-serif; padding-bottom: 10px;}
+h4 {}
+p {color: #fff;}
 nav {background-color: #2C2A4A;}
 .nav li a:hover {background-color: #2C2A4A;}
 li{list-style-type: none;}
 li img {width: 40px; margin: 0 10px;}
 a {color:#fff;}
 a:hover, a:visited, a:active, a:focus {color:#fff; text-decoration: none;}
-
+button {background-color: #fff; border-radius: 0;color: #000; margin: 7px; border-radius: 0px !important;}
+.selected-button {border-bottom: solid 7px #00AEF5;}
 .active {border-bottom: solid 3px #00AEF5;}
 .active a {color: #00AEF5;}
+.active button {background-color: red;}
 .visualization {padding-top: 2%; height: 100vh; background-color: #343253;}
 .the-chart {background-color: #fff;}
 .chart-section {padding: 0;}
@@ -27,17 +32,35 @@ a:hover, a:visited, a:active, a:focus {color:#fff; text-decoration: none;}
 .chart-style img{width: 40px; margin: 10px;}
 .selected-chart {}
 .selected-data {border-left: solid 7px #00AEF5 !important; color: #00AEF5 !important;}
-.input-form {background-color: #fff; margin-top: 5%; padding:2% 5%;}
-
-.form-section {background-color: #30304f;}
+.input-form {background-color: #25233E; color: #fff; margin-top: 5%; padding:2% 5%;}
+.filter-section {padding:0; background-color: #25233E; }
 .dataFilters {padding:0;}
 .dataFilters li {padding: 10%; border-bottom: solid 1px #343253; border-left: solid 7px #343253;font-size: 20px;}
+.tooltiptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: #25233E;
+    color: #fff;
+    border-radius: 0px;
+    padding: 5px 0;
+    font-size: 14px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.tooltip-hover:hover .tooltiptext {
+    visibility: visible;
+}
 
 #chart {height:80%;}
 #chart .c3-legend-item {}
 #filter-dropdown {}
-#chart-title {text-align: center;}
-#submit-button {}
+#submit-button {background-color:#00AEF5; color: #25233E; border-radius: 0px; padding: 20px; margin-top: 7%; font-family: 'Oswald', sans-serif; font-size: 24px;}
 
 
 
