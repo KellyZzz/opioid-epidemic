@@ -6,6 +6,8 @@ body {
 }
 .c3 svg {font: 13px 'Raleway', sans-serif; fill: #8E8E8E;}
 .c3-legend-item {font: 16px 'Raleway', sans-serif; fill: #fff;}
+.c3-tooltip th {background-color: #25233E;font-family: 'Oswald', sans-serif; font-size: 16px;}
+.c3-tooltip td {background-color: #343253; color: #fff;}
 
 h1 {text-align: center; color: #fff; font-family: 'Oswald', sans-serif;}
 h2{text-align: center; color: #fff;}
@@ -56,6 +58,7 @@ button {background-color: #fff; border-radius: 0;color: #000; margin: 7px; borde
 .tooltip-hover:hover .tooltiptext {
     visibility: visible;
 }
+
 
 #chart {height:80%;}
 #chart .c3-legend-item {}

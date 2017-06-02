@@ -16,6 +16,23 @@ var chart = c3.generate({
     },
     color: {
 	pattern: ['#00AEF5', '#b83b5e', '#f9ed69', '#1fab89',  '#ffccfc', '#ff5335']
+    },
+    tooltip: {
+	contents: function(d, defaultTitleFormat, defaultValueFormat, color) {
+          var out, row, total, x, _i, _len;
+          total = 0;
+          x = d[0].x;
+          out = '<table class="c3-tooltip" ><tbody><tr><th colspan="2">' + defaultTitleFormat(x) + '</th></tr>';
+          for (_i = 0, _len = d.length; _i < _len; _i++) {
+            row = d[_i];
+            total += row.value;
+            out += '<tr class="c3-tooltip-name-' + row.id + '"><td class="name">';
+            out += '<span style="background-color:' + color(row.id) + '"></span>' + row.name + '</td>';
+            out += '<td class="value">' + defaultValueFormat(row.value) + '</td></tr>';
+          }
+          out += '</tbody></table>';
+          return out;
+	}
     }
 });
 
