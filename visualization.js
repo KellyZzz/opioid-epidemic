@@ -30,17 +30,41 @@ function removeSelectedData (){
     $("#sex").removeClass("selected-data");
 }
 function changeData(dataToLoad){
+	//check which chart is selected and transform according
+	var transformType;
+	if ($(".selected-chart").attr("id") == "line-icon") {
+	    transformType = "line";
+	    console.log('line');
+	}
+	else if ($(".selected-chart").attr("id") == "bar-icon") {
+	    transformType = "bar";
+	    console.log('bar');
+	}
+	else {
+	    transformType = "area-spline";
+	    console.log('area');
+	}
+	
 	chart.unload();
 	switch(dataToLoad) {
 	    case 'total-deaths':
+		
 	        setTimeout(function(){
+			
 		        chart.load({
 		        	url: 'data/total-deaths.csv'
 		    	});
+			
+			
 	    	},1000);
+		setTimeout(function(){
+		    chart.transform(transformType);		
+	    	},1100);
+		
 	    	$("#filter-dropdown").html('All Deaths <span class="caret"></span>');
 		removeSelectedData();
 		$("#total-deaths").addClass("selected-data");
+		
 	        break;
 	    case 'age':
 	    	setTimeout(function(){
@@ -48,6 +72,9 @@ function changeData(dataToLoad){
 		        	url: 'data/age.csv'
 		    	});
 	    	},1000);
+		setTimeout(function(){
+		    chart.transform(transformType);		
+	    	},1100);
 	    	$("#filter-dropdown").html('Age <span class="caret"></span>');
 		removeSelectedData();
 		$("#age").addClass("selected-data");
@@ -58,6 +85,9 @@ function changeData(dataToLoad){
 		        	url: 'data/ethnicity.csv'
 		    	});
 	    	},1000);
+		setTimeout(function(){
+		    chart.transform(transformType);		
+	    	},1100);
 	    	$("#filter-dropdown").html('Ethnicity <span class="caret"></span>');
 		removeSelectedData();
 		$("#ethnicity").addClass("selected-data");
@@ -68,6 +98,9 @@ function changeData(dataToLoad){
 		        	url: 'data/intent.csv'
 		    	});
 	    	},1000);
+		setTimeout(function(){
+		    chart.transform(transformType);		
+	    	},1100);
 	    	$("#filter-dropdown").html('Intent <span class="caret"></span>');
 		removeSelectedData();
 		$("#intent").addClass("selected-data");
@@ -78,6 +111,9 @@ function changeData(dataToLoad){
 		        	url: 'data/opioid-type.csv'
 		    	});
 	    	},1000);
+		setTimeout(function(){
+		    chart.transform(transformType);		
+	    	},1100);
 	    	$("#filter-dropdown").html('Opioid Type <span class="caret"></span>');
 		removeSelectedData();
 		$("#opioid-type").addClass("selected-data");
@@ -88,6 +124,9 @@ function changeData(dataToLoad){
 		        	url: 'data/sex.csv'
 		    	});
 	    	},1000);
+		setTimeout(function(){
+		    chart.transform(transformType);		
+	    	},1100);
 	    	$("#filter-dropdown").html('Sex <span class="caret"></span>');
 		removeSelectedData();
 		$("#sex").addClass("selected-data");
@@ -96,6 +135,9 @@ function changeData(dataToLoad){
 	        chart.load({
 	        	url: 'data/total-deaths.csv'
 	    	});
+		setTimeout(function(){
+		    chart.transform(transformType);		
+	    	},100);
 		//removeSelectedData();
 		//$("all-deaths").addClass("selected-data");
 	} 
@@ -136,24 +178,6 @@ function changeChartType(newType) {
 
 }
 
-function changeChartData(dataFilter) {
-    switch(newType) {
-	    case 'all-deaths':
-		//removeSelectedChart();
-		$("all-deaths").addClass("selected-chart");
-	        break;
-	    case 'age':
-		//removeSelectedChart();
-		$("#age").addClass("selected-chart");
-	        break;
-	    case 'ethnicity':
-		//removeSelectedChart();
-		$("#ethnicity").addClass("selected-chart");
-	        break;    
-	    default:
-			
-	}
-}
 
 function parseCSV(fileName){
 	$.ajax({

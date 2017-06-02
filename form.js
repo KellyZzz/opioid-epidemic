@@ -127,7 +127,7 @@ function addMyReport() {
     
     
     $("#patient-form").append('<section class="col-md-12"><h1>My Report</h1>'
-			      +'<h2>You are <span style="color: #EB2A39;">2080%</span> more likely to overdose than the <span class="tooltip-hover" style="position: relative; display:inline-block; border-bottom: 1px dotted #00AEF5; ">typical*<span class="tooltiptext">Calculated using median values and assuming indpendence between variables.</span></span> opioid user.</h2>'
+			      +'<h2>You are <span style="color: #EB2A39;">2080%</span> more likely to overdose than the <span class="tooltip-hover" style="position: relative; display:inline-block; border-bottom: 1px dotted #00AEF5; ">typical*<span class="tooltiptext">Calculated using median values and assuming independence between variables.</span></span> opioid user.</h2>'
 			      + '<div class="col-md-12" id="myRiskChart" style="padding-left:0; width: 100%; height: 500px;"></div></section>');
     var myRiskChart = c3.generate({
 	bindto: '#myRiskChart',
