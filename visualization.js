@@ -76,7 +76,7 @@ function changeData(dataToLoad){
 	    	},1000);
 		setTimeout(function(){
 		    chart.transform(transformType);		
-	    	},1100);
+	    	},1400);
 		
 	    	$("#filter-dropdown").html('All Deaths <span class="caret"></span>');
 		removeSelectedData();
@@ -91,7 +91,7 @@ function changeData(dataToLoad){
 	    	},1000);
 		setTimeout(function(){
 		    chart.transform(transformType);		
-	    	},1100);
+	    	},1400);
 	    	$("#filter-dropdown").html('Age <span class="caret"></span>');
 		removeSelectedData();
 		$("#age").addClass("selected-data");
@@ -104,7 +104,7 @@ function changeData(dataToLoad){
 	    	},1000);
 		setTimeout(function(){
 		    chart.transform(transformType);		
-	    	},1100);
+	    	},1400);
 	    	$("#filter-dropdown").html('Ethnicity <span class="caret"></span>');
 		removeSelectedData();
 		$("#ethnicity").addClass("selected-data");
@@ -117,7 +117,7 @@ function changeData(dataToLoad){
 	    	},1000);
 		setTimeout(function(){
 		    chart.transform(transformType);		
-	    	},1100);
+	    	},1400);
 	    	$("#filter-dropdown").html('Intent <span class="caret"></span>');
 		removeSelectedData();
 		$("#intent").addClass("selected-data");
@@ -130,7 +130,7 @@ function changeData(dataToLoad){
 	    	},1000);
 		setTimeout(function(){
 		    chart.transform(transformType);		
-	    	},1100);
+	    	},1400);
 	    	$("#filter-dropdown").html('Opioid Type <span class="caret"></span>');
 		removeSelectedData();
 		$("#opioid-type").addClass("selected-data");
@@ -143,7 +143,7 @@ function changeData(dataToLoad){
 	    	},1000);
 		setTimeout(function(){
 		    chart.transform(transformType);		
-	    	},1100);
+	    	},1400);
 	    	$("#filter-dropdown").html('Sex <span class="caret"></span>');
 		removeSelectedData();
 		$("#sex").addClass("selected-data");
@@ -154,7 +154,7 @@ function changeData(dataToLoad){
 	    	});
 		setTimeout(function(){
 		    chart.transform(transformType);		
-	    	},100);
+	    	},400);
 		//removeSelectedData();
 		//$("all-deaths").addClass("selected-data");
 	} 
