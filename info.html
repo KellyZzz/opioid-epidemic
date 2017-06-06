@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="An Opioid Data Visualization">
+    <meta name="author" content="MKA Data">
+
+    <title>The Opioid Epidemic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Load c3.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" type="text/css"/> 
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <!-- Custom styles-->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- This is the CSS for the 'Prescriber' and 'Reseacher' buttons, paragraph padding, and links-->
+    <style>
+  
+      .p {
+        text-indent: 50px;
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+        font-size: 24;
+        }
+
+      .wrapper{
+        text-align: center;
+      }
+
+      img{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 60px;
+        padding-right: 40px;
+        margin: 0 auto;
+      }
+
+      .article {
+        color:#00AEF5;
+        text-decoration-line: underline;
+      }
+
+      .article:visited {
+        color:#00AEF5;
+        text-decoration-line: underline; 
+      }
+      .article:active{
+        color:#00AEF5;
+        text-decoration-line: underline;
+      }
+
+      .article:focus{
+        color:#00AEF5;
+        text-decoration-line: underline;
+      }
+
+      .article.hover{
+        color:#00AEF5;
+        text-decoration-line: underline;
+      }
+        
+    </style>
+  <!-- End of additional CSS -->
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top">
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">MKA Data</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" style="float: right;">
+          <ul class="nav navbar-nav" >
+            <li><a href="index.html">Home</a></li>
+            <li ><a href="analytics.html">Analytics</a></li>
+            <li><a href="my-risk.html">My Risk</a></li>
+            <li class="active"><a href="info.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse-->      
+        </div>    
+	  </nav>
+
+    <!-- Beginning of Webpage Content-->
+
+    <!-- Make sure to seperate both sections using bootstrap and seperate each section using row 6 column 6 (Make sure that row + column = 12) Check the bootstrap documentation  -->
+    <div class="row">
+        <div class="col-md-4">
+            <!--Opioid Picture-->
+            <img src="assets/opioids2.jpg" alt="Opioids Image" align="center"/>
+            <p style="padding-left: 60px;">
+                Photo Courtesy of: <a href="https://www.flickr.com/photos/gonzo_photo/2377314719/in/photolist-4C5mQP-fuMhax-ftEPGV-4eLfTe-aA2uws-sowzX-bqSQx1-odR4tQ-5JtbvB-dAKzua-4oN5wt-KrVmK-2Cz2t2-2CDtqA-9AMFDR-hEGKR-qsdFC-TbQd5-3PEpSg-4pHNDS-7bu5ot-5dkiMu-f6PkSU-5JxrLs-8UTVwY-6Cc9Va-8J35o4-8Tu9gF-5XK9Gw-7Nz9VD-9gWGT2-srpz6-5JtbFZ-9Ti8-jKzeQ-odUKHz-eVX2MD-rKnSK-299bML-CjnNf-iDUvP-66rvRg-9f4iRK-UYGs-kSwup-auVBrK-6k584S-5dn8dL-56NfTK-5ZA4Bz">Gregor Fischer</a>
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <!-- Title of page -->
+            <h1>How Information is Calculated</h1>
+            
+            <p style="padding-top: 20px;">
+                To calculate the MyRisk, an individual must input 3 variables: gender, age-range, and ethnicity. In order to calculate the total probability of one of the variables, we must first calculate
+                the total amount of deaths for a variable range divided by the total deaths for the state of California. After calculating the probability for each of the 3 variables, the variables must be multiplied together; this calculates
+                the total probability. The total population for individuals who fulfill the 3 variables, is then determined. Using this 3-variable specific population, the total deaths are then divided by that specific population and 
+                the overall risk for the individual is calculated. 
+        
+            </p>
+
+            <h1>
+                Where the Data is Collected From
+            </h1>
+
+            <p>
+                Data for all the information visualizations used for the Analytics page is collected from the <a class="article" href="http://epicenter.cdph.ca.gov/">California
+                Department of Public Health Database</a>. The analytics data has been collected and stored into CSV files, which can be downloaded below.
+            </p>
+
+            <p>
+                Data for all of the MyRisk Section, such as populations for gender, ethnicity, and age groups, was collected from the <a class="article" href="https://www.census.gov/developers/">
+                US Census Database</a>
+            </p>
+
+            <h1>
+                Download Analytics CSV Data Files
+            </h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="article" href="data/age.csv" download>age.csv</a>
+                    <br>
+                    <a class="article" href="data/opioid-type.csv" download>opioid-type.csv</a>
+
+                </div>
+
+                <div class="col-md-3">
+                    <a class="article" href="data/ethnicity.csv" download>ethnicity.csv</a>
+                    <br>
+                    <a class="article" href="data/sex.csv" download>sex.csv</a>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="article" href="data/intent.csv" download>intent.csv</a>
+                    <br>
+                    <a class="article" href="data/total-deaths.csv" download>total-deaths.csv</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">		
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Bootstrap JS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Load d3.js and c3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+    <script src="visualization.js"></script>
+  </body>
+</html>
