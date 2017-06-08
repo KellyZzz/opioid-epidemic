@@ -205,18 +205,27 @@ function parseCSV(fileName){
 	    },
 	    dataType: "text",
 	    complete: function () {
-	        // call a function on complete 
+	        // call a function on complete
 	    }
 	});
 	return data;
 }
 
-var ageData = parseCSV("data/age.csv");
-var ethnicityData = parseCSV("data/ethnicity.csv");
-var sexData = parseCSV("data/sex.csv");
-
-var inputtedAge = "45-54";
-
 //console.log(ageData[7][inputtedAge]);
+
+//for(i=0; i < populationData.length; i++){
+//    switch(patientAttributes) {
+//	case '0-24':
+//	    break;
+//	case '0':
+//	    break;
+//	default:
+//	    break;
+//    }
+//    console.log(populationData);
+//    
+//}
+
+
 
 

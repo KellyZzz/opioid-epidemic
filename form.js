@@ -114,15 +114,49 @@ $("#submit-button").click(function(){
 	var myRiskFactors = {gender:$("#gender").attr("value"), age:$("#age").attr("value"), ethnicity:$("#ethnicity").attr("value")};
 	//clear form
 	$("#patient-form").empty();
+	//calculate risk
+	calculateMyRisk(myRiskFactors);
 	//load report
 	addMyReport();
     }
     
 });
+//calculate myRisk
+var myRisk, typicalRisk;
+
+function calculateMyRisk(patientAttributes){
+    var totalDeaths = 4109;
+    var totalPopulation = 48440411;
+    typicalRisk = totalDeaths/totalPopulation;
+    var ageData = parseCSV("data/age.csv");
+    var ethnicityData = parseCSV("data/ethnicity.csv");
+    var sexData = parseCSV("data/sex.csv");
+    var populationData = parseCSV("data/population.csv");
+    
+    var ageDeaths = ageData[7][patientAttributes.age];
+    var ethnicityDeaths = ethnicityData[7][patientAttributes.ethnicity.charAt(0).toUpperCase() + patientAttributes.ethnicity.slice(1)];
+    var sexDeaths = sexData[7][patientAttributes.gender.charAt(0).toUpperCase() + patientAttributes.gender.slice(1)];
+    
+    var AgeProbability = ageDeaths/totalDeaths;
+    var ethnicityProbability = ethnicityDeaths/totalDeaths;
+    var sexProbability = sexDeaths/totalDeaths;
+    var myProbability = AgeProbability * ethnicityProbability * sexProbability;
+    
+    for(i=0; i < populationData.length; i++){
+	if (populationData[i].Age == patientAttributes.age) {
+	    if (populationData[i].Ethnicity.toLowerCase() == patientAttributes.ethnicity) {
+		if (populationData[i].Sex.toLowerCase() == patientAttributes.gender) {
+		   //console.log(populationData[i].N);
+		   myRisk = ((myProbability * totalDeaths) / (populationData[i].N));
+		   console.log("My risk: " + myRisk);
+		}
+	    }
+	}	
+    }    
+}
+
 
 //add my report
-
-
 function addMyReport() {
     
     
@@ -133,8 +167,8 @@ function addMyReport() {
 	bindto: '#myRiskChart',
 	data: {
 	columns: [
-	    ['Typical Risk', .000030],
-	    ['Your Risk', .000624]
+	    ['Typical Risk', typicalRisk],
+	    ['Your Risk', myRisk]
 	],
 	type: 'bar'
 	},

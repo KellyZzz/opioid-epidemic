@@ -81,23 +81,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--Bootstrap JS-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--jQuery parse CSV-->
+    <script src="jquery-csv.min.js"></script>
     <!-- Load d3.js and c3.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+    
     <script src="visualization.js"></script>
-    <script>
-      //call to get total population for california
-      //$.get("http://api.census.gov/data/2014/pep/natstprc?get=STNAME,POP&for=state:*&DATE=7&key=176ed854526d31687861443510027737ef8d0357", function(data, status){
-      //  console.log("total population in California: " +data[5][1]);
-      //});
-      
-      $.get("http://api.census.gov/data/2013/pep/stchar6?get=AGE,HISP,RACE6,SEX,DATE,STNAME,POP&for=state:*&key=176ed854526d31687861443510027737ef8d0357", function(data, status){
-        console.log(data);
-      });
-      
-      $.get("http://api.census.gov/data/2013/acs1?get=NAME,B01001B_008E&for=state:*&key=176ed854526d31687861443510027737ef8d0357", function(data, status){
-        console.log(data);
-      });
-  </script>
   </body>
 </html>
