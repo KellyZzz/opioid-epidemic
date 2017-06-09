@@ -122,20 +122,21 @@ $("#submit-button").click(function(){
     
 });
 //calculate myRisk
-var myRisk, typicalRisk;
+var myRisk, typicalRisk, differenceInRisk;
 
 function calculateMyRisk(patientAttributes){
     var totalDeaths = 4109;
     var totalPopulation = 48440411;
-    typicalRisk = totalDeaths/totalPopulation;
+    typicalRisk = (totalDeaths/totalPopulation);
     var ageData = parseCSV("data/age.csv");
     var ethnicityData = parseCSV("data/ethnicity.csv");
     var sexData = parseCSV("data/sex.csv");
     var populationData = parseCSV("data/population.csv");
     
     var ageDeaths = ageData[7][patientAttributes.age];
-    var ethnicityDeaths = ethnicityData[7][patientAttributes.ethnicity.charAt(0).toUpperCase() + patientAttributes.ethnicity.slice(1)];
-    var sexDeaths = sexData[7][patientAttributes.gender.charAt(0).toUpperCase() + patientAttributes.gender.slice(1)];
+    var ethnicityDeaths = ethnicityData[7][patientAttributes.ethnicity];
+    var sexDeaths = sexData[7][patientAttributes.gender];
+    
     
     var AgeProbability = ageDeaths/totalDeaths;
     var ethnicityProbability = ethnicityDeaths/totalDeaths;
@@ -143,25 +144,26 @@ function calculateMyRisk(patientAttributes){
     var myProbability = AgeProbability * ethnicityProbability * sexProbability;
     
     for(i=0; i < populationData.length; i++){
-	if (populationData[i].Age == patientAttributes.age) {
-	    if (populationData[i].Ethnicity.toLowerCase() == patientAttributes.ethnicity) {
-		if (populationData[i].Sex.toLowerCase() == patientAttributes.gender) {
+	if (populationData[i].age == patientAttributes.age) {
+	    if (populationData[i].ethnicity == patientAttributes.ethnicity) {
+		if (populationData[i].sex == patientAttributes.gender) {
 		   //console.log(populationData[i].N);
-		   myRisk = ((myProbability * totalDeaths) / (populationData[i].N));
-		   console.log("My risk: " + myRisk);
+		   myRisk = ((myProbability * totalDeaths) / (populationData[i].n));
+		   differenceInRisk = (((myRisk - typicalRisk) / typicalRisk) * 100).toFixed(2);
+		   console.log("Difference in risk: " + differenceInRisk);
 		}
 	    }
 	}	
     }    
 }
 
-
 //add my report
 function addMyReport() {
-    
+    myRisk = parseFloat(myRisk.toFixed(9));
+    typicalRisk = parseFloat(typicalRisk.toFixed(9));
     
     $("#patient-form").append('<section class="col-md-12"><h1>My Report</h1>'
-			      +'<h2>You are <span style="color: #EB2A39;">2080%</span> more likely to overdose than the <span class="tooltip-hover" style="position: relative; display:inline-block; border-bottom: 1px dotted #00AEF5; ">typical*<span class="tooltiptext">Calculated using median values and assuming independence between variables.</span></span> opioid user.</h2>'
+			      +'<h2>You are <span style="color: #EB2A39;">' + differenceInRisk + '%</span> <span id="more-or-less">more</span> likely to overdose <br>than the <span class="tooltip-hover" style="position: relative; display:inline-block; border-bottom: 1px dotted #00AEF5; ">typical*<span class="tooltiptext">total opioid overdoses / total population</span></span> Californian.</h2>'
 			      + '<div class="col-md-12" id="myRiskChart" style="padding-left:0; width: 100%; height: 500px;"></div></section>');
     var myRiskChart = c3.generate({
 	bindto: '#myRiskChart',
@@ -172,6 +174,12 @@ function addMyReport() {
 	],
 	type: 'bar'
 	},
+	axis: {
+	    x: {
+		type: 'category',
+		categories: ['Risk of Overdose']
+	    },
+	},
 	padding: {
 	    right: 20,
 	    bottom: 20,
@@ -181,4 +189,9 @@ function addMyReport() {
 	    pattern: ['#00AEF5', '#EB2A39', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
 	}
     });
+    
+if (differenceInRisk < 0) {
+    $("#more-or-less").text("less");
+}
+
 }

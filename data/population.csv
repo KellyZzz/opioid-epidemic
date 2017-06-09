@@ -1,74 +1,73 @@
-Age,Sex,Ethnicity,N
-0-24,Male,White,3347703
-0-24,Male,Black,409379
-0-24,Male,Hispanic,3296795
-0-24,Male,American Indian,71911
-0-24,Male,Asian/PI,765060
-0-24,Male,Other/Unknown,1509878
-0-24,Female,White,3173176
-0-24,Female,Black,404022
-0-24,Female,Hispanic,3139099
-0-24,Female,American Indian,68923
-0-24,Female,Asian/PI,728516
-0-24,Female,Other/Unknown,1439095
-25-34,Male,White,1400179
-25-34,Male,Black,135918
-25-34,Male,Hispanic,1135137
-25-34,Male,American Indian,26873
-25-34,Male,Asian/PI,359354
-25-34,Male,Other/Unknown,566150
-25-34,Female,White,1353271
-25-34,Female,Black,150916
-25-34,Female,Hispanic,1089160
-25-34,Female,American Indian,25577
-25-34,Female,Asian/PI,401719
-25-34,Female,Other/Unknown,525175
-35-44,Male,White,1415271
-35-44,Male,Black,136358
-35-44,Male,Hispanic,1008046
-35-44,Male,American Indian,24464
-35-44,Male,Asian/PI,369306
-35-44,Male,Other/Unknown,475860
-35-44,Female,White,1389282
-35-44,Female,Black,154318
-35-44,Female,Hispanic,997888
-35-44,Female,American Indian,24131
-35-44,Female,Asian/PI,428790
-35-44,Female,Other/Unknown,461142
-45-54,Male,White,1591986
-45-54,Male,Black,153850
-45-54,Male,Hispanic,750887
-45-54,Male,American Indian,24861
-45-54,Male,Asian/PI,340125
-45-54,Male,Other/Unknown,337143
-45-54,Female,White,1599811
-45-54,Female,Black,173676
-45-54,Female,Hispanic,769349
-45-54,Female,American Indian,25934
-45-54,Female,Asian/PI,399919
-45-54,Female,Other/Unknown,337702
-55-64,Male,White,1310346
-55-64,Male,Black,106312
-55-64,Male,Hispanic,414818
-55-64,Male,American Indian,16748
-55-64,Male,Asian/PI,258879
-55-64,Male,Other/Unknown,167307
-55-64,Male,,
-55-64,Female,White,1379403
-55-64,Female,Black,125150
-55-64,Female,Hispanic,462758
-55-64,Female,American Indian,17944
-55-64,Female,Asian/PI,315943
-55-64,Female,Other/Unknown,180102
-65 and over,Male,White,1325682
-65 and over,Male,Black,88371
-65 and over,Male,Hispanic,309742
-65 and over,Male,American Indian,11876
-65 and over,Male,Asian/PI,238548
-65 and over,Male,Other/Unknown,102465
-65 and over,Female,White,1677723
-65 and over,Female,Black,124748
-65 and over,Female,Hispanic,422219
-65 and over,Female,American Indian,14326
-65 and over,Female,Asian/PI,319506
-65 and over,Female,Other/Unknown,136410
+age,sex,ethnicity,n
+0-24,male,white,3347703
+0-24,male,black,409379
+0-24,male,hispanic,3296795
+0-24,male,american-indian,71911
+0-24,male,asian-pi,765060
+0-24,male,other,1509878
+0-24,female,white,3173176
+0-24,female,black,404022
+0-24,female,hispanic,3139099
+0-24,female,american-indian,68923
+0-24,female,asian-pi,728516
+0-24,female,other,1439095
+25-34,male,white,1400179
+25-34,male,black,135918
+25-34,male,hispanic,1135137
+25-34,male,american-indian,26873
+25-34,male,asian-pi,359354
+25-34,male,other,566150
+25-34,female,white,1353271
+25-34,female,black,150916
+25-34,female,hispanic,1089160
+25-34,female,american-indian,25577
+25-34,female,asian-pi,401719
+25-34,female,other,525175
+35-44,male,white,1415271
+35-44,male,black,136358
+35-44,male,hispanic,1008046
+35-44,male,american-indian,24464
+35-44,male,asian-pi,369306
+35-44,male,other,475860
+35-44,female,white,1389282
+35-44,female,black,154318
+35-44,female,hispanic,997888
+35-44,female,american-indian,24131
+35-44,female,asian-pi,428790
+35-44,female,other,461142
+45-54,male,white,1591986
+45-54,male,black,153850
+45-54,male,hispanic,750887
+45-54,male,american-indian,24861
+45-54,male,asian-pi,340125
+45-54,male,other,337143
+45-54,female,white,1599811
+45-54,female,black,173676
+45-54,female,hispanic,769349
+45-54,female,american-indian,25934
+45-54,female,asian-pi,399919
+45-54,female,other,337702
+55-64,male,white,1310346
+55-64,male,black,106312
+55-64,male,hispanic,414818
+55-64,male,american-indian,16748
+55-64,male,asian-pi,258879
+55-64,male,other,167307
+55-64,female,white,1379403
+55-64,female,black,125150
+55-64,female,hispanic,462758
+55-64,female,american-indian,17944
+55-64,female,asian-pi,315943
+55-64,female,other,180102
+65-and-over,male,white,1325682
+65-and-over,male,black,88371
+65-and-over,male,hispanic,309742
+65-and-over,male,american-indian,11876
+65-and-over,male,asian-pi,238548
+65-and-over,male,other,102465
+65-and-over,female,white,1677723
+65-and-over,female,black,124748
+65-and-over,female,hispanic,422219
+65-and-over,female,american-indian,14326
+65-and-over,female,asian-pi,319506
+65-and-over,female,other,136410
