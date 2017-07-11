@@ -1,4 +1,4 @@
-# drug-data-viz
+# the opioid epidemic
 
 This is a data visualization project with the intent of raising awareness of the opioid epidemic and discouraging use of these painkillers.
 
